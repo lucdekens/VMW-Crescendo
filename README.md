@@ -1,10 +1,8 @@
-# VMW-Crescendo
-Exploring the possibilities of the [Crescendo module](https://www.powershellgallery.com/packages/Microsoft.PowerShell.Crescendo) in a VMware environment.
+# SRS-Explore
+Exploring [SRS](https://github.com/vmware/script-runtime-service-for-vsphere)
 
 ## Related links
 
-[Announcing PowerShell Crescendo Preview.1](https://devblogs.microsoft.com/powershell/announcing-powershell-crescendo-preview-1/)
+[Introduction to Script Runtime Service (SRS) for vSphere](https://blogs.vmware.com/PowerCLI/2020/12/introduction-to-script-runtime-service-srs-for-vsphere.html)
 
-[Native Commands in PowerShell – A New Approach](https://devblogs.microsoft.com/powershell/native-commands-in-powershell-a-new-approach/)
-
-[Native Commands in PowerShell – A New Approach – Part 2](https://devblogs.microsoft.com/powershell/native-commands-in-powershell-a-new-approach-part-2/)
+[Slack - VMware {code} -#script-runtime-service-assist](https://vmwarecode.slack.com/archives/C01DEGNBSF5)
