@@ -1,0 +1,63 @@
+{
+  "$schema": "./Microsoft.PowerShell.Crescendo.Schema.json",
+  "OriginalCommandElements": [
+    "logging",
+    "level",
+    "set"
+  ],
+  "Parameters": [
+    {
+      "OriginalName": "vmsvc",
+      "ParameterType": "switch",
+      "Description": "Primary VMware Tools service",
+      "Name": "Svc"
+    },
+    {
+      "OriginalName": "vmvss",
+      "ParameterType": "switch",
+      "Description": "Volume Shadow Copy service",
+      "Name": "Vss"
+    },
+    {
+      "OriginalName": "vmresset",
+      "ParameterType": "switch",
+      "Description": "Resolution Set Tool",
+      "Name": "Resolution"
+    },
+    {
+      "OriginalName": "vmtray",
+      "ParameterType": "switch",
+      "Description": "The Tray icon in Windows",
+      "Name": "Tray"
+    },
+    {
+      "OriginalName": "vmusr",
+      "ParameterType": "switch",
+      "Description": "The VMware Tools user service",
+      "Name": "User"
+    },
+    {
+      "OriginalName": "toolbox",
+      "ParameterType": "switch",
+      "Description": "Toolbox UI",
+      "Name": "Toolbox"
+    },
+    {
+      "OriginalName": "toolboxcmd",
+      "ParameterType": "switch",
+      "Description": "Toolbox command line",
+      "Name": "ToolBoxCmd"
+    },
+    {
+      "OriginalName": "",
+      "ParameterType": "string",
+      "Description": "New debug level",
+      "Name": "Level",
+      "Mandatory": true
+    }
+  ],
+  "Description": "Retrieve the debug levels for VMware Tools",
+  "Verb": "Set",
+  "OriginalName": "C:\\Program Files\\VMware\\VMware Tools\\VMwareToolboxCmd.exe",
+  "Noun": "ToolsDebugSetting"
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "./Microsoft.PowerShell.Crescendo.Schema.json",
+  "Description": "Retrieve the debug levels for VMware Tools",
+  "OriginalName": "C:\\Program Files\\VMware\\VMware Tools\\VMwareToolboxCmd.exe",
+  "Noun": "ToolsDebugSetting",
+  "Parameters": [
+    {
+      "OriginalName": "vmsvc",
+      "ParameterType": "switch",
+      "Description": "Primary VMware Tools service",
+      "Name": "Svc"
+    },
+    {
+      "OriginalName": "vmvss",
+      "ParameterType": "switch",
+      "Description": "Volume Shadow Copy service",
+      "Name": "Vss"
+    },
+    {
+      "OriginalName": "vmresset",
+      "ParameterType": "switch",
+      "Description": "Resolution Set Tool",
+      "Name": "Resolution"
+    },
+    {
+      "OriginalName": "vmtray",
+      "ParameterType": "switch",
+      "Description": "The Tray icon in Windows",
+      "Name": "Tray"
+    },
+    {
+      "OriginalName": "vmusr",
+      "ParameterType": "switch",
+      "Description": "The VMware Tools user service",
+      "Name": "User"
+    },
+    {
+      "OriginalName": "toolbox",
+      "ParameterType": "switch",
+      "Description": "Toolbox UI",
+      "Name": "Toolbox"
+    },
+    {
+      "OriginalName": "toolboxcmd",
+      "ParameterType": "switch",
+      "Description": "Toolbox command line",
+      "Name": "ToolBoxCmd"
+    }
+  ],
+  "OutputHandlers": [
+    {
+      "Handler": "\r\n              $service,$level = $args[0].Split('=')\r\n              New-Object -TypeName PSObject -Property @{\r\n                \"$($service -replace '.level','')\" = $level.Trim(' ')\r\n              }\r\n            ",
+      "ParameterSetName": "Default"
+    }
+  ],
+  "Verb": "Get",
+  "OriginalCommandElements": [
+    "logging",
+    "level",
+    "get"
+  ]
+}

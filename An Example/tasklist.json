@@ -1,0 +1,15 @@
+{
+  "OutputHandlers": [
+    {
+      "Handler": "\r\n              $labels = $args[0][1]\r\n              $index = 0\r\n              $fieldInfo = $args[0][2].Split(' ') | ForEach-Object -Process {\r\n                @{\r\n                  start = $index\r\n                  length = $_.Length\r\n                }\r\n                $index += $_.Length + 1\r\n              }\r\n              $args[0] | Select-Object -skip 3 -PipelineVariable row | ForEach-Object -Process {\r\n                $obj = [ordered]@{}\r\n                $fieldInfo | ForEach-Object -Process {\r\n                  $obj.Add($labels.SubString($_.start,$_.length).Trim(' '),$row.SubString($_.start,$_.length).Trim(' '))\r\n                }\r\n                New-Object -TypeName PSObject -Property $obj\r\n              }\r\n            ",
+      "ParameterSetName": "Default"
+    }
+  ],
+  "$schema": "./Microsoft.PowerShell.Crescendo.Schema.json",
+  "OriginalCommandElements": [
+    "/V"
+  ],
+  "Verb": "Get",
+  "OriginalName": "tasklist",
+  "Noun": "TaskList"
+}
